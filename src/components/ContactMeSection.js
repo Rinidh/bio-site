@@ -17,6 +17,7 @@ import * as Yup from "yup";
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
 import { useAlertContext } from "../context/alertContext";
+import "../style/ContactMeSection.css";
 
 const LandingSection = () => {
   const { isLoading, response, submit } = useSubmit();
@@ -93,7 +94,12 @@ const LandingSection = () => {
                 isInvalid={formik.touched.type && formik.errors.type}
               >
                 <FormLabel htmlFor="type">Type of enquiry</FormLabel>
-                <Select id="type" name="type" {...formik.getFieldProps("type")}>
+                <Select
+                  id="type"
+                  name="type"
+                  {...formik.getFieldProps("type")}
+                  backgroundColor={"#512DA8"}
+                >
                   <option value="">Select one</option>
                   <option value="hireMe">Freelance project proposal</option>
                   <option value="openSource">

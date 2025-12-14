@@ -18,11 +18,11 @@ const LandingSection = () => (
   >
     <VStack>
       <Avatar src={rinidh} name="Rinidh" size={"xl"} />
-      <Heading size="sm" mb={7}>
+      <Heading size="md" mb={7}>
         {greeting}
       </Heading>
-      <Heading size="xl">{bio1}</Heading>
-      <Heading size="xl">{bio2}</Heading>
+      <Heading size="lg">{bio1}</Heading>
+      <Heading size="lg">{bio2}</Heading>
     </VStack>
   </FullScreenSection>
 );
