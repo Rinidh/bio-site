@@ -34,19 +34,15 @@ const socials = [
 ];
 
 const Header = () => {
-  const sliderBoxRef = useRef(null);
+  const headerContainerRef = useRef(null);
   const previousScrollY = useRef(0);
 
   useEffect(() => {
     const handleScroll = (e) => {
       if (window.scrollY > previousScrollY.current) {
-        if (sliderBoxRef.current) {
-          sliderBoxRef.current.style.transform = "translateY(-200px)";
-        }
+        headerContainerRef.current.style.transform = "translateY(-200px)";
       } else {
-        if (sliderBoxRef.current) {
-          sliderBoxRef.current.style.transform = "translateY(0)";
-        }
+        headerContainerRef.current.style.transform = "translateY(0)";
       }
       previousScrollY.current = window.scrollY;
     };
@@ -58,7 +54,7 @@ const Header = () => {
 
   return (
     <Box
-      ref={sliderBoxRef}
+      ref={headerContainerRef}
       position="fixed"
       top={0}
       left={0}
