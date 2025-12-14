@@ -2,13 +2,3 @@
 smooth scroll on clicking Header <a>s
 
 
-I appreciate your overall trial to make a pure React-only app. But a good developer is one who leverages the available resources to make the best as quickly as possible.
-Please consider the following:
-- Prefer using Chakra UI. I personally spent small time learning it but it was worth. Read docs of version 2 as it is the one being used in this project. Link: https://v2.chakra-ui.com/docs/components/avatar/usage
-- Please follow instructions and include all social media links, eg links to facebook, stack overflow etc were missing and misaligned. Please read the instructions before starting the project
-- Smooth scroll to a page section is not working. Try visiting this link to know how to do it: https://www.w3schools.com/jsref/met_element_scrollintoview.asp
-- Prefer using `const lastScrollY = useRef(0)` instead of a local variable. This ensures the value doesn't reset unintentionally upon App's re-renders
-- Please include the images throughout your project. This won't increase the ZIP file size greatly. You were required to only neglect the `node_modules` folder, `package-lock.json` and other personal files
-- Use controlled form field inputs ie store their current value in `useState()`. Rather use libraries like Formik to handle this easily. If unaware, please review lesson: "Creating Controlled Form Components" in module 1 of this course
-
-Sorry for the criticism but hope to see a better developer out of you by this 😊
