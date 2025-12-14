@@ -8,6 +8,7 @@ import {
   faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
 import { Box, HStack } from "@chakra-ui/react";
+import "../style/Header.css";
 
 const socials = [
   {
@@ -35,18 +36,6 @@ const socials = [
 const Header = () => {
   const sliderBoxRef = useRef(null);
   const previousScrollY = useRef(0);
-  const handleClick = (anchor) => (e) => {
-    anchor.preventDefault();
-    e.preventDefault();
-    const id = `${anchor}-section`;
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
 
   useEffect(() => {
     const handleScroll = (e) => {
@@ -103,12 +92,8 @@ const Header = () => {
           <nav>
             <HStack spacing={8}>
               {/* Add links to Projects and Contact me section */}
-              <a href="#projects-section" onClick={handleClick}>
-                Projects
-              </a>
-              <a href="#contactme-section" onClick={handleClick}>
-                Contact Me
-              </a>
+              <a href="#projects-section">Projects</a>
+              <a href="#contactme-section">Contact Me</a>
             </HStack>
           </nav>
         </HStack>
